@@ -1,0 +1,10 @@
+{
+    "popclip version": 3785,
+    "name": "Dot List",
+    "icon": "DotList.svg",
+    "description": "Split a dot-separated list into separate lines, and vice versa.",
+    "module": "dot-list.js",
+    "entitlements": [
+        "dynamic"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+  "popclip version": 3785,
+  "name": "查询词根",
+  "icon": "remspace.png",
+  "javascript file": "getWordRoot.js",
+  "entitlements": [
+    "network"
+  ],
+  "description": "get word root."
+}

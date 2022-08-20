@@ -1,0 +1,7 @@
+{
+  "popclip version": 3785,
+  "name": "去除空行",
+  "icon": "remspace.png",
+  "javascript file": "removeBlankLines.js",
+  "description": "Remove blank lines from the selected text."
+}
