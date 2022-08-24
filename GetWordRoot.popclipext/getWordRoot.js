@@ -24,4 +24,4 @@ var target_url = 'https://www.dicts.cn'+String(response.data).trim()
 //文本输出
 popclip.showText(target_word)
 //打开网址
-popclip.openUrl(target_url, { app: "com.google.Chrome" });
+popclip.openUrl(target_url);
