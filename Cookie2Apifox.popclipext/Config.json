@@ -1,0 +1,7 @@
+{
+  "popclip version": 3785,
+  "name": "复制cookie到apifox",
+  "icon": "square cok",
+  "javascript file": "cookie2Apifox.js",
+  "description": "copy cookies to apifox"
+}
