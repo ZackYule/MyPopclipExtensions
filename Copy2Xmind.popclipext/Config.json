@@ -1,0 +1,7 @@
+{
+  "popclip version": 3785,
+  "name": "复制文本内容到XMind",
+  "icon": "square XM",
+  "javascript file": "copy2Xmind.js",
+  "description": "复制文本内容到XMind，进行格式的调整"
+}
