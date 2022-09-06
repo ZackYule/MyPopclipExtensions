@@ -1,14 +1,18 @@
 //文本输入
-const lines = popclip.input.text.match(/[^\r\n]+/g) // 按行读取
+const lines = popclip.input.text.trim().split(/[\s]/).filter(str => str.length > 0)
 
 //文本转换
-var target_word=''
+const target_word = lines[0].toLowerCase()
+// var target_word=''
 
-for( var i=0; i<lines.length;i++){ //遍历所有行
-    if(lines[i].replace(/^\s+|\s+$/g,"").length>0){ // 判断是否是空行
-        target_word = lines[i].split(/\r\n|\r|\n/).map(str => str.trim()).filter(str => str.length > 0)[0]; // 保留第一个字符
-    }
-}
+// for( var i=0; i<lines.length;i++){ //遍历所有行
+//     if(lines[i].replace(/^\s+|\s+$/g,"").length>0){ // 判断是否是空行
+//         target_word = lines[i].map(str => str.trim()).filter(str => str.length > 0)[0]; // 保留第一个字符
+//     }
+// }
+
+//文本输出
+popclip.showText(target_word)
 
 //网址请求
 const axios = require('axios')
@@ -18,10 +22,7 @@ const config = {
     }
 }
 const response = await axios.get('https://www.dicts.cn/dict/dict/dict!searchhtml3.asp?id='+target_word,config) 
+const target_url = 'https://www.dicts.cn'+String(response.data).trim()
 
-var target_url = 'https://www.dicts.cn'+String(response.data).trim()
-
-//文本输出
-popclip.showText(target_word)
 //打开网址
 popclip.openUrl(target_url);
